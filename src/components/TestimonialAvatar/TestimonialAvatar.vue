@@ -1,5 +1,5 @@
 <template>
-  <div>TestimonialAvatar</div>
+  <img tabindex="0" />
 </template>
 
 <script lang="ts">
