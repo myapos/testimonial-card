@@ -4,10 +4,14 @@
       text-center"
     data-gfe-screenshot-exclude="true"
   >
-    A challenge by
-    <a href="https://www.greatfrontend.com/projects?ref=challenges" target="_blank"
+    <span tabindex="0" class="mr-1">A challenge by</span>
+    <a
+      href="https://www.greatfrontend.com/projects?ref=challenges"
+      target="_blank"
+      class="font-bold text-black mr-1"
       >GreatFrontEnd Projects</a
-    >. Built by
+    >
+    <span tabindex="0" class="mr-1">Built by</span>
     <a
       :href="`https://www.greatfrontend.com/projects/u/${username}`"
       target="_blank"
