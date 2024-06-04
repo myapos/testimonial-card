@@ -2,7 +2,7 @@
 
 This a coding challenge published in [GreatFrontEnd](https://www.greatfrontend.com) platform and it's main task is to implement a reusable, responsive testimonial card that will be used as a building block in blogs. This implementation is using Vite, Vue3 and Tailwind CSS.
 
-Demo[https://testimonial-card-one.vercel.app/]
+[Demo URL](https://testimonial-card-one.vercel.app//)
 
 ## Recommended IDE Setup
 
