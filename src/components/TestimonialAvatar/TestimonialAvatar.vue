@@ -1,5 +1,5 @@
 <template>
-  <img class="img w-full h-[--card-img-height] rounded-[--radius] object-cover" />
+  <img tabindex="0" />
 </template>
 
 <script lang="ts">

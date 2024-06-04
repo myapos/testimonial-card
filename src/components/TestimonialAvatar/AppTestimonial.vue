@@ -1,12 +1,15 @@
 <template>
   <div
-    class="blog-card flex flex-col gap-[--gap] justify-between w-[--card-container-width]
-      border-neutral-200 bg-white rounded-[--radius] h-auto mx-auto mt-[--card-margin-top] shadow-md
-      mb-4"
+    class="flex flex-col justify-center md:justify-start lg:justify-center
+      mt-[--testimonial-container-top-margin] w-[--testimonial-container-width] gap-[--gap] bg-white
+      p-6 rounded-lg border border-solid border-neutral-200 h-auto mx-auto mb-4
+      shadow-[0_1px_2px_0_rgba(0,0,0,0.1)]"
     tabindex="0"
   >
-    <testimonial-avatar :src="imgSrc" :alt="alt" />
-    <testimonial-info :name="name" :nickname="nickname" />
+    <div id="profile" class="flex justify-center items-center gap-4 self-stretch" tabindex="0">
+      <testimonial-avatar :src="imgSrc" :alt="alt" class="w-12 h-12 object-cover" />
+      <testimonial-info :name="name" :nickname="nickname" />
+    </div>
     <testimonial-text :text="text" />
   </div>
 </template>
