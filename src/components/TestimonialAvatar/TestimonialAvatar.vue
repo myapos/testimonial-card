@@ -1,5 +1,5 @@
 <template>
-  <div>TestimonialAvatar</div>
+  <img class="img w-full h-[--card-img-height] rounded-[--radius] object-cover" />
 </template>
 
 <script lang="ts">

@@ -1,12 +1,19 @@
 <template>
-  <div>TestimonialText</div>
+  <div>{{ text }}</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TestimonialText'
+  name: 'TestimonialText',
+  props: {
+    text: {
+      type: String,
+      required: true,
+      default: ''
+    }
+  }
 })
 </script>
 

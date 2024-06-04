@@ -5,15 +5,9 @@
       mb-4"
     tabindex="0"
   >
-    <testimonial-avatar />
-    <testimonial-info />
-    <testimonial-text />
-    <!-- <card-image :src="imgSrc" :alt="alt" tabindex="0" :aria-hidden="alt ? 'false' : 'true'" />
-    <section class="card-content gap-[--gap] p-4 flex flex-col items-start" tabindex="0">
-      <card-tag :tag="tag" tabindex="0" />
-      <card-header :header="header" tabindex="0" />
-      <card-description :description="description" />
-    </section> -->
+    <testimonial-avatar :src="imgSrc" :alt="alt" />
+    <testimonial-info :name="name" :nickname="nickname" />
+    <testimonial-text :text="text" />
   </div>
 </template>
 
@@ -35,19 +29,22 @@ export default defineComponent({
     alt: {
       type: String,
       required: true,
+      default: 'profile picture'
+    },
+    name: {
+      type: String,
+      required: true,
       default: ''
     },
-    tag: {
+    nickname: {
       type: String,
-      required: true
+      required: true,
+      default: ''
     },
-    header: {
+    text: {
       type: String,
-      required: true
-    },
-    description: {
-      type: String,
-      required: true
+      required: true,
+      default: ''
     }
   }
 })

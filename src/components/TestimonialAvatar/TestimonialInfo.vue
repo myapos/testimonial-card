@@ -1,12 +1,24 @@
 <template>
-  <div>TestimonialInfo</div>
+  <div>{{ name }} - {{ nickname }}</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TestimonialInfo'
+  name: 'TestimonialInfo',
+  props: {
+    name: {
+      type: String,
+      required: true,
+      default: ''
+    },
+    nickname: {
+      type: String,
+      required: true,
+      default: ''
+    }
+  }
 })
 </script>
 
