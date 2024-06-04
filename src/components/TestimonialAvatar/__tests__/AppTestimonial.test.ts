@@ -36,7 +36,7 @@ describe('AppTestimonial', () => {
     expect(wrapper.text()).toContain('Read More')
   })
 
-  it('should show toggle the entire text', async () => {
+  it('should toggle the entire text', async () => {
     const wrapper = mount(AppTestimonial, {
       props: { ...testimonialProps, text: testimonialProps.longText }
     })
@@ -46,9 +46,8 @@ describe('AppTestimonial', () => {
     // click on read more
     await wrapper.find('[data-testid="readmore-btn"]').trigger('click')
     expect(wrapper.find('[data-testid="testimonial-text"]').classes()).not.toContain('line-clamp-5')
-    // expect(wrapper.find('[data-testid="testimonial-text"]').classes()).not.toContain('line-clamp-5')
-    // // click on read more again to toggle classes
-    // await wrapper.find('[data-testid="readmore-btn"]').trigger('click')
-    // expect(wrapper.find('[data-testid="testimonial-text"]').classes()).not.toContain('line-clamp-5')
+    // click on read more again to toggle classes
+    await wrapper.find('[data-testid="readmore-btn"]').trigger('click')
+    expect(wrapper.find('[data-testid="testimonial-text"]').classes()).toContain('line-clamp-5')
   })
 })

@@ -5,12 +5,14 @@
       ...(showFullText ? ['line-clamp-none'] : ['line-clamp-5'])
     ]"
     tabindex="0"
+    data-testid="testimonial-text"
   >
     {{ text }}
   </blockquote>
   <button
     v-if="showReadMore"
     id="readmore-btn"
+    data-testid="readmore-btn"
     class="block text-start hover:text-neutral-600"
     @click="toggleShowFullText"
   >
