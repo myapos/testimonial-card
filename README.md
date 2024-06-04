@@ -1,6 +1,6 @@
-# testimonial-card
+# GreatFrontEnd Projects Challenge - testimonial-card
 
-This template should help get you started developing with Vue 3 in Vite.
+This a coding challenge published in [GreatFrontEnd](https://www.greatfrontend.com) platform and it's main task is to implement a reusable, responsive testimonial card that will be used as a building block in blogs. This implementation is using Vite, Vue3 and Tailwind CSS.
 
 ## Recommended IDE Setup
 
