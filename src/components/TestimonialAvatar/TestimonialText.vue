@@ -1,5 +1,21 @@
 <template>
-  <div class="font-normal text-base text-neutral-600" tabindex="0">{{ text }}</div>
+  <blockquote
+    :class="[
+      'font-normal text-base text-neutral-600 ',
+      ...(showFullText ? ['line-clamp-none'] : ['line-clamp-5'])
+    ]"
+    tabindex="0"
+  >
+    {{ text }}
+  </blockquote>
+  <button
+    v-if="showReadMore"
+    id="readmore-btn"
+    class="block text-start hover:text-neutral-600"
+    @click="toggleShowFullText"
+  >
+    Read More
+  </button>
 </template>
 
 <script lang="ts">
@@ -12,6 +28,22 @@ export default defineComponent({
       type: String,
       required: true,
       default: ''
+    },
+    showFullText: {
+      type: Boolean,
+      required: true,
+      default: false
+    },
+    showReadMore: {
+      type: Boolean,
+      required: true,
+      default: false
+    }
+  },
+  emits: ['toggleShowFullText'],
+  methods: {
+    toggleShowFullText() {
+      this.$emit('toggleShowFullText')
     }
   }
 })
